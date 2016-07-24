@@ -39,7 +39,7 @@ var autoprefixer = require('autoprefixer-core'),
 var options = minimist(process.argv.slice(2), {
 	string: 'env',
 	default: {
-		env: 'dev'
+		env: 'prod'
 	}
 });
 

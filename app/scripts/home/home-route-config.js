@@ -1,11 +1,12 @@
 define(function(require) {
 	'use strict';
 
-	var demoRoute = require('./demo-route');
+	var homeRoute = require('./home-route');
 
 	var routeConfig = function($routeProvider) {
 		$routeProvider
-			.when('/demo', demoRoute);
+			.when('/home', homeRoute.index)
+			.when('/about', homeRoute.about);
 	};
 
 	routeConfig.$inject = ['$routeProvider'];
