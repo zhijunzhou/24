@@ -8,7 +8,6 @@ define(function(require) {
 
 	return {
 		index: {
-			controller: 'rootController',
 			template: homeTpl
 		},
 		about: {

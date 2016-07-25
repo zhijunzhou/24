@@ -1,9 +1,9 @@
 define(function() {
 	'use strict';
 
-	var rootController = function($scope) {
+	var rootController = ['$scope', function($scope) {
 		$scope.firstValue = 'Hi Allen';
-	};
+	}];
 
 	rootController.id = 'rootController';
 
