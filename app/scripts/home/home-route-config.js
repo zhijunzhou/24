@@ -5,8 +5,7 @@ define(function(require) {
 
 	var routeConfig = function($routeProvider) {
 		$routeProvider
-			.when('/home', homeRoute.index)
-			.when('/about', homeRoute.about);
+			.when('/home', homeRoute.index);
 	};
 
 	routeConfig.$inject = ['$routeProvider'];

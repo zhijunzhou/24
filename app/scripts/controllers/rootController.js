@@ -7,5 +7,7 @@ define(function() {
 
 	rootController.id = 'rootController';
 
+	rootController.$inject = ['$scope'];
+
 	return rootController;
 });

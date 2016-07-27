@@ -20,6 +20,7 @@ var autoprefixer = require('autoprefixer-core'),
 	jscs = require('gulp-jscs'),
 	jshint = require('gulp-jshint'),
 	less = require('gulp-less'),
+	using = require('gulp-using'),
 	mainBowerFiles = require('main-bower-files'),
 	minifyCss = require('gulp-minify-css'),
 	plumber = require('gulp-plumber'),
@@ -61,7 +62,8 @@ if (options.env === 'prod') {
 // local server utils
 var runServer = function(open, callback) {
 	browserSync({
-		notify: false,
+		notify: true,
+		browser: 'chrome',
 		port: 9000,
 		open: open,
 		server: {
@@ -151,7 +153,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('fonts', function() {
-	return gulp.src(mainBowerFiles().concat('app/fonts/**/*'))
+	return gulp.src(mainBowerFiles().concat('app/lib/vendor/**/*'))
 		.pipe(filter('**/*.{eot,svg,ttf,woff,woff2}'))
 		.pipe(flatten())
 		.pipe(gulp.dest('dist/fonts'));

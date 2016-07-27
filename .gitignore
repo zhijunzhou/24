@@ -1,6 +1,8 @@
 # Dependencies
 node_modules
 app/lib/bower
+app/lib/vendor
+app/images
 
 # Build files
 dist
@@ -10,3 +12,4 @@ coverage
 # IntelliJ project files
 *.iml
 .idea
+app/npm-debug.log
