@@ -11,8 +11,6 @@ require.config({
 
 		'text': '../lib/bower/requirejs-text/text',
 
-		'scrollreveal': '../lib/vendor/scrollreveal/scrollreveal',
-
 		'partials': '../partials'
 	},
 

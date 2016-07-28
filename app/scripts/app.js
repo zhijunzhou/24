@@ -7,6 +7,7 @@ define(function(require) {
 		routeConfig = require('routes/route-config');
 
 	require('angular.route');
+	require('../lib/vendor/scrollreveal/scrollreveal');
 
 	var app = angular.module('apple', [
 		'ngRoute',
