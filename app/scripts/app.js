@@ -9,7 +9,7 @@ define(function(require) {
 	require('angular.route');
 	require('../lib/vendor/scrollreveal/scrollreveal');
 
-	var app = angular.module('apple', [
+	var app = angular.module('24', [
 		'ngRoute',
 		homeModule.name
 	]);

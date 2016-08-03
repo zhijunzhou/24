@@ -186,7 +186,7 @@ gulp.task('unit-test-jshint', function() {
 gulp.task('unit-test', ['unit-test-jshint'], function(done) {
 	karma.start({
 		configFile: __dirname + '/test/karma.conf.js',
-		singleRun: true
+		singleRun: false
 	}, done);
 });
 
