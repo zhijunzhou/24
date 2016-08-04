@@ -124,7 +124,8 @@ gulp.task('html', ['styles'], function() {
 
 	var cssChannel = lazypipe()
 		.pipe(minifyCss)
-		.pipe(replace, '../lib/bower/bootstrap/fonts/', '../fonts/');
+		.pipe(replace, '../lib/bower/bootstrap/fonts/', '../fonts/')
+		.pipe(replace, '../lib/bower/font-awesome/fonts/', '../fonts/');
 
 	var htmlChannel = lazypipe()
 		.pipe(minifyHtml);
@@ -152,7 +153,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('fonts', function() {
-	return gulp.src(mainBowerFiles().concat('app/lib/vendor/**/*'))
+	return gulp.src(mainBowerFiles().concat('app/lib/bower/**/*'))
 		.pipe(filter('**/*.{eot,svg,ttf,woff,woff2}'))
 		.pipe(flatten())
 		.pipe(gulp.dest('dist/fonts'));
