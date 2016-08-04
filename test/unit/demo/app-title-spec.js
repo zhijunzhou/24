@@ -3,7 +3,7 @@ define(function(require) {
 
 	require('angular.mocks');
 
-	var demoModule = require('demo/demo-module');
+	var demoModule = require('home/home-module');
 
 	describe('Title directive', function() {
 		var element, scope;
@@ -20,7 +20,7 @@ define(function(require) {
 		}));
 
 		it('should create a title heading', function() {
-			expect(element.text().trim()).toBe('Joe');
+			expect(element.text().trim()).toBe('24');
 		});
 	});
 });

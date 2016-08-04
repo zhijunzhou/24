@@ -12,7 +12,7 @@ define(function(require) {
 		beforeEach(inject(function() {}));
 
 		it('should create an angular module', function() {
-			expect(app.name).toBe('Joe');
+			expect(app.name).toBe('24');
 		});
 	});
 });

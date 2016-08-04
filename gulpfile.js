@@ -39,7 +39,7 @@ var autoprefixer = require('autoprefixer-core'),
 var options = minimist(process.argv.slice(2), {
 	string: 'env',
 	default: {
-		env: 'dev'
+		env: 'prod'
 	}
 });
 
@@ -61,7 +61,8 @@ if (options.env === 'prod') {
 // local server utils
 var runServer = function(open, callback) {
 	browserSync({
-		notify: false,
+		notify: true,
+		browser: 'chrome',
 		port: 9000,
 		open: open,
 		server: {
@@ -123,7 +124,8 @@ gulp.task('html', ['styles'], function() {
 
 	var cssChannel = lazypipe()
 		.pipe(minifyCss)
-		.pipe(replace, '../lib/bower/bootstrap/fonts/', '../fonts/');
+		.pipe(replace, '../lib/bower/bootstrap/fonts/', '../fonts/')
+		.pipe(replace, '../lib/bower/font-awesome/fonts/', '../fonts/');
 
 	var htmlChannel = lazypipe()
 		.pipe(minifyHtml);
@@ -151,7 +153,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('fonts', function() {
-	return gulp.src(mainBowerFiles().concat('app/fonts/**/*'))
+	return gulp.src(mainBowerFiles().concat('app/lib/bower/**/*'))
 		.pipe(filter('**/*.{eot,svg,ttf,woff,woff2}'))
 		.pipe(flatten())
 		.pipe(gulp.dest('dist/fonts'));
@@ -185,7 +187,7 @@ gulp.task('unit-test-jshint', function() {
 gulp.task('unit-test', ['unit-test-jshint'], function(done) {
 	karma.start({
 		configFile: __dirname + '/test/karma.conf.js',
-		singleRun: true
+		singleRun: false
 	}, done);
 });
 
