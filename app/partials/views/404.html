@@ -1,0 +1,113 @@
+<style type="text/css">
+div.example {
+	height: 8em;
+	width: 8em;
+	float: left;
+	margin-left: 10px;
+	border-radius: 50%;
+}
+.long-badge {
+	height: 60px;
+	width: 100%;
+	background: linear-gradient(to right, red, orange, yellow, green, blue);
+}
+.example1 {
+	background: linear-gradient(to bottom, blue, white);
+}
+.example2 {
+	background: linear-gradient(to right, blue, white); 
+}
+.example3 {
+	background: linear-gradient(to bottom right, blue, white);
+}
+.example4 {
+	background: linear-gradient(to bottom, blue, white 80%, orange);
+}
+.example5 {
+	background: linear-gradient(to right, red, orange, yellow, green, blue);
+}
+.example6 {
+	background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), url(images/header.png);
+	background-size: cover;
+	background-repeat: none;
+}
+.example7 {
+	background: radial-gradient(red, yellow, rgb(30, 144, 255));
+}
+.example8 {
+	background: radial-gradient(red 5%, yellow 25%, #1E90FF 50%);
+}
+.example9 {
+	background: radial-gradient(ellipse closest-side, red, yellow 10%, #1E90FF 50%, white);
+}
+.example10 {
+	background: radial-gradient(ellipse farthest-corner, red, yellow 10%, #1E90FF 50%, white);
+}
+.example11 {
+	background: radial-gradient(circle closest-side, red, yellow 10%, #1E90FF 50%, white);
+}
+.example12 {
+	background: repeating-linear-gradient(-45deg, red, red 5px, white 5px, white 10px);
+}
+.example13 {
+	background-color: #000;
+background-image: repeating-linear-gradient(90deg, transparent, transparent 50px,
+      rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px,
+      rgba(255, 127, 0, 0.25) 63px, rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px,
+      rgba(255, 206, 0, 0.25) 116px, rgba(255, 206, 0, 0.25) 166px),
+repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(255, 127, 0, 0.25) 50px,
+      rgba(255, 127, 0, 0.25) 56px, transparent 56px, transparent 63px, rgba(255, 127, 0, 0.25) 63px,
+      rgba(255, 127, 0, 0.25) 69px, transparent 69px, transparent 116px, rgba(255, 206, 0, 0.25) 116px,
+      rgba(255, 206, 0, 0.25) 166px),
+repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px,
+      rgba(143, 77, 63, 0.25) 10px),
+repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(143, 77, 63, 0.25) 5px,
+      rgba(143, 77, 63, 0.25) 10px);
+}
+.example14 {
+	background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+}
+.cylon_eye {
+  color:white;
+  height: 100%;
+  width: 10%;
+
+  background-color: red;
+  background-image: -webkit-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image:    -moz-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image:     -ms-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image:      -o-linear-gradient(left, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+  background-image:         linear-gradient(to right, rgba( 0,0,0,0.9 ) 25%, rgba( 0,0,0,0.1 ) 50%, rgba( 0,0,0,0.9 ) 75%);
+
+  -webkit-animation: move_eye 4s linear 0s infinite alternate;
+     -moz-animation: move_eye 4s linear 0s infinite alternate;
+       -o-animation: move_eye 4s linear 0s infinite alternate;
+          animation: move_eye 4s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+   @-moz-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+     @-o-keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+        @keyframes move_eye { from { margin-left:-20%; } to { margin-left:100%; }  }
+</style>
+<div class="long-badge">
+	<div class="cylon_eye"></div>
+</div>
+<div class="container">
+	<h2>Aha!!! <br/>You are lost! Choose the correct picture to go back!</h2>
+	<div class="col-md-1 example example1"></div>
+	<div class="col-md-1 example example2"></div>
+	<div class="col-md-1 example example3"></div>
+	<div class="col-md-1 example example4"></div>
+	<div class="col-md-1 example example5"></div>
+	<div class="col-md-1 example example6"></div>
+	<div class="col-md-1 example example7"></div>
+	<div class="col-md-1 example example8"></div>
+	<div class="col-md-1 example example9"></div>
+	<div class="col-md-1 example example10"></div>
+	<div class="col-md-1 example example11"></div>
+	<div class="col-md-1 example example12"></div>
+	<div class="col-md-1 example example13"></div>
+	<div class="col-md-1 example example14"></div>
+
+</div>

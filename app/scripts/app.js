@@ -4,6 +4,7 @@ define(function(require) {
 	var angular = require('angular'),
 		homeModule = require('home/home-module'),
 		rootController = require('controllers/rootController'),
+		startController = require('controllers/startController'),
 		routeConfig = require('routes/route-config');
 
 	require('angular.route');
@@ -17,6 +18,7 @@ define(function(require) {
 	app.config(routeConfig);
 
 	app.controller(rootController.id, rootController);
+	app.controller(startController.id, startController);
 
 	return app;
 });

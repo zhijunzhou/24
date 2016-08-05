@@ -6,7 +6,9 @@ define(function(require) {
 	var routeConfig = function($routeProvider) {
 		$routeProvider
 			.when('/', routes.index)
-			.otherwise(routes.demo);
+			.when('/start', routes.start)
+			.otherwise(routes.unknownRsc);
+
 	};
 
 	routeConfig.$inject = ['$routeProvider'];
