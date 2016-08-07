@@ -7,6 +7,7 @@ define(function(require) {
 		$routeProvider
 			.when('/', routes.index)
 			.when('/start', routes.start)
+			.when('/editInfo', routes.editInfo)
 			.otherwise(routes.unknownRsc);
 
 	};
