@@ -8,6 +8,7 @@ define(function(require) {
 		startController = require('controllers/startController'),
 		infoController = require('controllers/infoController'),
 		navBannerDirective = require('directives/nav-banner-directive'),
+		bottomPanelDirective = require('directives/bottom-panel-directive'),
 		routeConfig = require('routes/route-config');
 
 	require('angular.route');
@@ -27,6 +28,7 @@ define(function(require) {
 	app.controller(infoController.id, infoController);
 
 	app.directive(navBannerDirective.id, navBannerDirective);
+	app.directive(bottomPanelDirective.id, bottomPanelDirective);
 
 	return app;
 });
