@@ -5,6 +5,7 @@ define(function(require) {
 		constant = require('model/constant'),
 		homeModule = require('home/home-module'),
 		rootController = require('controllers/rootController'),
+		mainController = require('controllers/mainController'),
 		startController = require('controllers/startController'),
 		infoController = require('controllers/infoController'),
 		navBannerDirective = require('directives/nav-banner-directive'),
@@ -24,6 +25,7 @@ define(function(require) {
 	app.config(routeConfig);
 
 	app.controller(rootController.id, rootController);
+	app.controller(mainController.id, mainController);
 	app.controller(startController.id, startController);
 	app.controller(infoController.id, infoController);
 

@@ -1,24 +1,27 @@
 define(function(require) {
 	'use strict';
+	// http://blog.csdn.net/evankaka
 
 	var template = require('text!partials/directives/bottomPanel.html');
 
-	var directive = function($window) {
+	var directive = function() {
 		return {
 			restrict: 'E',
             replace: true,
+            scope: {
+				currentTab: '='
+            },
 			template: template,
 			link: function(scope) {
-				scope.back = function() {
-					$window.history.back();
+				scope.switch = function(tab) {
+					// todo change tab
+					console.log(tab);
 				};
 			}
 		};
 	};
 
 	directive.id = 'bottomPanel';
-
-	directive.$inject = ['$window'];
 
 	return directive;
 });

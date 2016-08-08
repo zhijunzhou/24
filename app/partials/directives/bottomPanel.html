@@ -1,24 +1,17 @@
-<div class="cc">
-	<nav class="navbar navbar-fixed-bottom navbar-custom">
-		<div class="col-xs-4 h1 text-center">
-			<a class="text-default active" data-toggle="tab" data-target="#home">
-				<i class="fa fa-home" aria-hidden="true"></i>
-			</a>
-		</div>
-		<div class="col-xs-4 h1 text-center">
-			<a class="text-default" data-toggle="tab" data-target="#messages">
-				<i class="fa fa-car" aria-hidden="true"></i>
-			</a>
-		</div>
-		<div class="col-xs-4 h1 text-center">
-			<a class="text-default" data-toggle="tab" data-target="#settings">
-				<i class="fa fa-user" aria-hidden="true"></i>
-			</a>
-		</div>
-	</nav>
-	<div class="tab-content container"> 
-      <div class="tab-pane active" id="home">主页</div> 
-      <div class="tab-pane" id="messages">信息</div> 
-      <div class="tab-pane" id="settings">用户设置</div> 
-    </div> 
-</div>
+<nav class="navbar navbar-fixed-bottom navbar-custom">
+	<div class="col-xs-4 h1 text-center" ng-click="switch('home')">
+		<a class="text-default active" data-toggle="tab" data-target="#home">
+			<i class="fa fa-home" aria-hidden="true"></i>
+		</a>
+	</div>
+	<div class="col-xs-4 h1 text-center" ng-click="switch('messages')">
+		<a class="text-default" data-toggle="tab" data-target="#messages">
+			<i class="fa fa-car" aria-hidden="true"></i>
+		</a>
+	</div>
+	<div class="col-xs-4 h1 text-center" ng-click="switch('settings')">
+		<a class="text-default" data-toggle="tab" data-target="#settings">
+			<i class="fa fa-user" aria-hidden="true"></i>
+		</a>
+	</div>
+</nav>
