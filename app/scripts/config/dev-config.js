@@ -7,6 +7,10 @@ require.config({
 
 		'underscore': '../lib/bower/lodash/lodash',
 
+		'jquery': '../lib/bower/jquery/dist/jquery',
+
+		'bootstrap': '../lib/bower/bootstrap/dist/js/bootstrap',
+
 		'log': 'logging/console-logger',
 
 		'text': '../lib/bower/requirejs-text/text',
@@ -18,6 +22,7 @@ require.config({
 		'angular': {
 			exports: 'angular'
 		},
-		'angular.route': ['angular']
+		'angular.route': ['angular'],
+		'bootstrap': ['jquery']
 	}
 });
