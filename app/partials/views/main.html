@@ -1,15 +1,15 @@
 <nav-banner title="currentTitle"></nav-banner>
 
 <section class="main-section">
-	<div class="tab-content container">
+	<div class="tab-content">
 	  <div ng-if="currentTab == 'home'" class="tab-pane active">	  	
 	  	<div>{{currentTab}}</div>
 	  </div> 
 	  <div ng-if="currentTab == 'messages'" class="tab-pane active">
 	  	<div>{{currentTab}}</div>
 	  </div> 
-	  <div ng-if="currentTab == 'settings'" class="tab-pane active">
-	  	<div>{{currentTab}}</div>
+	  <div ng-if="currentTab == 'settings'" class="tab-pane active">	  	
+	  	<user-brief></user-brief>
 	  </div> 
 	</div> 
 </section>
