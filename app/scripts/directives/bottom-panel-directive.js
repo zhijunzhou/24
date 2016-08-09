@@ -9,7 +9,7 @@ define(function(require) {
 			restrict: 'E',
             replace: true,
             scope: {
-				currentTab: '='
+				tab: '='
             },
 			template: template,
 			link: function(scope) {

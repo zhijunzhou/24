@@ -1,20 +1,17 @@
 define(function() {
 	'use strict';
 
-	var mainController = function($scope, CONSTANT) {
+	var mainController = function($scope, $routeParams, CONSTANT) {
 
 		$scope.currentTitle = CONSTANT.Titles.main.title;
 
-		$scope.currentTab = 'home';
+		$scope.currentTab = $routeParams.tab;
 
-		$scope.$watch('currentTab', function(n, o) {
-			console.log(n, o);
-		});
 	};
 
 	mainController.id = 'mainController';
 
-	mainController.$inject = ['$scope', 'CONSTANT'];
+	mainController.$inject = ['$scope', '$routeParams', 'CONSTANT'];
 
 	return mainController;
 });

@@ -3,7 +3,7 @@ define(function(require) {
 
 	var template = require('text!partials/directives/navBanner.html');
 
-	var directive = function($window) {
+	var directive = function($window, $location) {
 		return {
 			restrict: 'E',
             replace: true,
@@ -13,7 +13,11 @@ define(function(require) {
 			template: template,
 			link: function(scope) {
 				scope.back = function() {
-					$window.history.back();
+					if (scope.title === '主页') {
+						$location.url('/');
+					} else {
+						$window.history.back();
+					}
 				};
 			}
 		};
@@ -21,7 +25,7 @@ define(function(require) {
 
 	directive.id = 'navBanner';
 
-	directive.$inject = ['$window'];
+	directive.$inject = ['$window', '$location'];
 
 	return directive;
 });
