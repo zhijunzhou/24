@@ -6,11 +6,12 @@ define(function(require) {
 		homeModule = require('home/home-module'),
 		rootController = require('controllers/rootController'),
 		mainController = require('controllers/mainController'),
-		startController = require('controllers/startController'),
 		infoController = require('controllers/infoController'),
+		startController = require('controllers/startController'),
 		navBannerDirective = require('directives/nav-banner-directive'),
-		bottomPanelDirective = require('directives/bottom-panel-directive'),
 		userBriefDirective = require('directives/user-brief-directive'),
+		bottomPanelDirective = require('directives/bottom-panel-directive'),
+		funcEntranceDirective = require('directives/func-entrance-directive'),
 		routeConfig = require('routes/route-config');
 
 	require('angular.route');
@@ -31,8 +32,9 @@ define(function(require) {
 	app.controller(infoController.id, infoController);
 
 	app.directive(navBannerDirective.id, navBannerDirective);
-	app.directive(bottomPanelDirective.id, bottomPanelDirective);
 	app.directive(userBriefDirective.id, userBriefDirective);
+	app.directive(bottomPanelDirective.id, bottomPanelDirective);
+	app.directive(funcEntranceDirective.id, funcEntranceDirective);
 
 	return app;
 });
