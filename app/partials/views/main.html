@@ -1,9 +1,13 @@
 <nav-banner title="currentTitle"></nav-banner>
 
-<section class="main-section">
+<section class="main-section" id="main-section">
 	<div class="tab-content">
-	  <div ng-if="currentTab == 'home'" class="tab-pane active">	  	
-	  	<div>{{currentTab}}</div>
+	  <div ng-if="currentTab == 'home'" class="tab-pane active">
+
+	  	<subject-progress></subject-progress>
+	  	
+	  	<func-category></func-category>
+	  	
 	  </div> 
 	  <div ng-if="currentTab == 'messages'" class="tab-pane active">
 	  	<div>{{currentTab}}</div>
@@ -11,8 +15,9 @@
 	  <div ng-if="currentTab == 'settings'" class="tab-pane active">	  	
 	  	<user-brief></user-brief>
 	  	<func-entrance></func-entrance>
+	  	<app-settings></app-settings>
 	  </div> 
-	</div> 
+	</div>
 </section>
 
 <bottom-panel tab="currentTab"></bottom-panel>
