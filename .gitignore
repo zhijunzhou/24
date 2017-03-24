@@ -202,7 +202,6 @@ sdist/
 .tmp/
 app/
 coverage/
-images/
 javascripts/
 develop-eggs/
 node_modules/
