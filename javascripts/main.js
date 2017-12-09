@@ -5,6 +5,9 @@ $(function() {
       // 我们从事件“e”中获取角度值并转化成弧度值。
       leftRightAngle = e.gamma;
       frontBackAngle = e.beta;
+      if(leftRightAngle || frontBackAngle) {
+        $('#angle_area').html("(" + leftRightAngle + ", " + frontBackAngle + ")");
+      } 
         if(leftRightAngle>45||leftRightAngle<-45){
                 
         }
