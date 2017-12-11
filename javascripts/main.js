@@ -14,15 +14,15 @@ window.addEventListener('load', function() {
         
         if (y > 0) {
           if (gap > 0) {
-            transform = "rotate(-" + gap + "deg) scale(1, 1)";
+            transform = "rotate(-" + gap + "deg) scale(2, 2)";
           } else {
-            transform = "rotate(" + gap + "deg) scale(1, 1)";
+            transform = "rotate(" + gap + "deg) scale(2, 2)";
           }
         } else {
           if (gap > 0) {
-            transform = "rotate(" + gap + "deg) scale(1, 1)";
+            transform = "rotate(" + gap + "deg) scale(2, 2)";
           } else {
-            transform = "rotate(-" + gap + "deg) scale(1, 1)";
+            transform = "rotate(-" + gap + "deg) scale(2, 2)";
           }
         }
         water.innerText = transform
