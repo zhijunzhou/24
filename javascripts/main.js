@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
       
       if(water) {
         var prev = 0;
-        var gap = x - prev - 90;
+        var gap = Math.abs(x - prev - 90);
         var transform = "";
         var transformOrigin = "top center"
         
