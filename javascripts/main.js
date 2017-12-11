@@ -25,7 +25,7 @@ window.addEventListener('load', function() {
             transform = "rotate(-" + gap + "deg) scale(1, 1)";
           }
         }
-        water.innerText(transform)
+        water.innerText = transform
         water.style.transform = transform;
         water.style.transformOrigin = transformOrigin;
       }
