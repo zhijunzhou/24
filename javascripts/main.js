@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
   if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(e) {   
-      var water = document.getElementById('animation');
+      var water = document.getElementById('water');
       var xAngle = parseInt(e.beta, 10);
       var yAngle = parseInt(e.gamma, 10);
       var zAngle = parseInt(e.alpha, 10);
