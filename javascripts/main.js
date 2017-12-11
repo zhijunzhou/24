@@ -10,7 +10,8 @@ window.addEventListener('load', function() {
         var prev = 0;
         var gap = Math.abs(x - prev - 90);
         var transform = "";
-        var transformOrigin = "top center"
+        var transformOrigin = "top center";
+        var delay = "0.05s";
         
         if (y > 0) {
           if (gap > 0) {
@@ -28,6 +29,7 @@ window.addEventListener('load', function() {
         // water.innerText = transform
         water.style.transform = transform;
         water.style.transformOrigin = transformOrigin;
+        water.style.transitionDelay = delay
       }
     }, false);
   } else if (window.OrientationEvent) {
