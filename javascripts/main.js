@@ -1,4 +1,4 @@
-$(function() {
+window.addEventListener('load', function() {
   if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(e) {   
       var water = document.getElementById('animation');
