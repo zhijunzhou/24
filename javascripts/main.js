@@ -6,10 +6,6 @@ window.addEventListener('load', function() {
       var y = parseInt(e.gamma, 10);
       var z = parseInt(e.alpha, 10);
       
-      if(x || y || z) {
-        $('#angle_area').html("(x, y, z): (" + x + ", " + y + ", " + z +")");
-      }
-      
       if(water) {
         var prev = 0;
         var gap = x - prev;
@@ -29,6 +25,7 @@ window.addEventListener('load', function() {
             transform = "rotate(-" + gap + "deg) scale(1, 1)";
           }
         }
+        water.innerText(transform)
         water.style.transform = transform;
         water.style.transformOrigin = transformOrigin;
       }
