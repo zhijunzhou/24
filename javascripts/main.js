@@ -3,9 +3,9 @@ $(function() {
   if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(e) {
       // 我们从事件“e”中获取角度值并转化成弧度值。
-      leftRightAngle = e.gamma;
-      frontBackAngle = e.beta;
-      zAngle = e.alpha
+      leftRightAngle = parseInt(e.gamma, 10);
+      frontBackAngle = parseInt(e.beta, 10);
+      zAngle = parseInt(e.alpha, 10);
       if(leftRightAngle || frontBackAngle) {
         $('#angle_area').html("(x, y, z): (" + frontBackAngle + ", " + leftRightAngle + ", " + zAngle +")");
       } 
