@@ -2,17 +2,35 @@ window.addEventListener('load', function() {
   if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientation', function(e) {   
       var water = document.getElementById('water');
-      var xAngle = parseInt(e.beta, 10);
-      var yAngle = parseInt(e.gamma, 10);
-      var zAngle = parseInt(e.alpha, 10);
+      var x = parseInt(e.beta, 10);
+      var y = parseInt(e.gamma, 10);
+      var z = parseInt(e.alpha, 10);
       
-      if(xAngle || yAngle || zAngle) {
-        $('#angle_area').html("(x, y, z): (" + xAngle + ", " + yAngle + ", " + zAngle +")");
+      if(x || y || z) {
+        $('#angle_area').html("(x, y, z): (" + x + ", " + y + ", " + z +")");
       }
       
       if(water) {
-        water.style.transform = "rotate(-" + xAngle + "deg) scale(2, 1)";
-        water.style.transformOrigin = "top center";
+        var prev = 0;
+        var gap = x - prev;
+        var transform = "";
+        var transformOrigin = "top center"
+        
+        if (y > 0) {
+          if (gap > 0) {
+            transform = "rotate(-" + gap + "deg) scale(1, 1)";
+          } else {
+            transform = "rotate(" + gap + "deg) scale(1, 1)";
+          }
+        } else {
+          if (gap > 0) {
+            transform = "rotate(" + gap + "deg) scale(1, 1)";
+          } else {
+            transform = "rotate(-" + gap + "deg) scale(1, 1)";
+          }
+        }
+        water.style.transform = transform;
+        water.style.transformOrigin = transformOrigin;
       }
     }, false);
   } else if (window.OrientationEvent) {
